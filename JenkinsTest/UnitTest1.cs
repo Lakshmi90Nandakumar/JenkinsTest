@@ -10,8 +10,9 @@ namespace JenkinsTest
         public void TestMethod1()
         {
             IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("http://localhost:8084");
-
+            driver.Navigate().GoToUrl("https://leafground.com/window.xhtml");
+            IWebElement ele=driver.FindElement(By.XPath("//span[text()='Open Multiple']"));
+            ele.Click();
             driver.Close();
 
         }
